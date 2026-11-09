@@ -1,15 +1,15 @@
-package com.campuslands.directorio.service;
+package com.campuslands.taller_directorio_funcionarios.services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.campuslands.directorio.dto.FuncionarioRequest;
-import com.campuslands.directorio.exception.FuncionarioNoEncontradoException;
-import com.campuslands.directorio.exception.SolicitudInvalidaException;
-import com.campuslands.directorio.model.Funcionario;
-import com.campuslands.directorio.repository.FuncionarioRepository;
+import com.campuslands.taller_directorio_funcionarios.dto.FuncionarioRequest;
+import com.campuslands.taller_directorio_funcionarios.exceptions.FuncionarioNoEncontradoException;
+import com.campuslands.taller_directorio_funcionarios.exceptions.SolicitudInvalidaException;
+import com.campuslands.taller_directorio_funcionarios.entities.Funcionario;
+import com.campuslands.taller_directorio_funcionarios.repositories.FuncionarioRepository;
 
 /**
  * Reglas del directorio: que filtro se aplica, que pasa si un ID no existe y como se guardan los datos.

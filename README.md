@@ -7,7 +7,7 @@ Directorio web para que el equipo administrativo registre funcionarios, consulte
 ## Tecnologías
 
 - Java 21
-- Spring Boot 4 con el patrón MVC (Spring Web MVC, Spring Data JPA, Bean Validation)
+- Spring Boot 4 con el patrón MVC (Spring Web MVC, Spring Data JPA, Bean Validation, Lombok)
 - MySQL 8
 - HTML, CSS y JavaScript vanilla (sin frameworks de frontend)
 - Maven (incluye el Maven Wrapper, no hace falta instalar Maven)
@@ -99,18 +99,18 @@ Ejemplo de respuesta de error:
 ## Estructura del proyecto
 
 ```
-src/main/java/com/campuslands/directorio
-├── DirectorioFuncionariosApplication.java   Punto de entrada
-├── model/Funcionario.java                   Entidad JPA (tabla funcionarios)
-├── repository/FuncionarioRepository.java    Acceso a datos con Spring Data JPA
-├── service/FuncionarioService.java          Reglas del directorio y filtros
-├── controller/FuncionarioController.java    Controlador REST
-├── dto/                                     Cuerpos JSON de solicitud y de error
-└── exception/                               Excepciones y manejador global (400 y 404)
+src/main/java/com/campuslands/taller_directorio_funcionarios
+├── TallerDirectorioFuncionariosApplication.java   Punto de entrada
+├── entities/Funcionario.java                      Entidad JPA (tabla funcionarios)
+├── repositories/FuncionarioRepository.java        Acceso a datos con Spring Data JPA
+├── services/FuncionarioService.java               Reglas del directorio y filtros
+├── controllers/FuncionarioController.java         Controlador REST
+├── dto/                                           Cuerpos JSON de solicitud y de error
+└── exceptions/                                    Excepciones y manejador global (400 y 404)
 
 src/main/resources
-├── application.properties                   Conexión a MySQL
-└── static/                                  Página: index.html, styles.css, app.js
+├── application.properties                         Conexión a MySQL
+└── static/                                        Página: index.html, styles.css, app.js
 ```
 
 ## Pruebas

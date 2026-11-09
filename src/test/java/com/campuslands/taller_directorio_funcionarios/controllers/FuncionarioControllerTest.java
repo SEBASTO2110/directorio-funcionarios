@@ -1,4 +1,4 @@
-package com.campuslands.directorio.controller;
+package com.campuslands.taller_directorio_funcionarios.controllers;
 
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.hasSize;
@@ -27,9 +27,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.campuslands.directorio.model.Funcionario;
-import com.campuslands.directorio.repository.FuncionarioRepository;
-import com.campuslands.directorio.service.FuncionarioService;
+import com.campuslands.taller_directorio_funcionarios.entities.Funcionario;
+import com.campuslands.taller_directorio_funcionarios.repositories.FuncionarioRepository;
+import com.campuslands.taller_directorio_funcionarios.services.FuncionarioService;
 
 /**
  * Comprueba los codigos HTTP y las reglas de la API sin necesitar MySQL:

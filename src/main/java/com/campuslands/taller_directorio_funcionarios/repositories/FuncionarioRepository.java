@@ -1,10 +1,10 @@
-package com.campuslands.directorio.repository;
+package com.campuslands.taller_directorio_funcionarios.repositories;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.campuslands.directorio.model.Funcionario;
+import com.campuslands.taller_directorio_funcionarios.entities.Funcionario;
 
 /**
  * Acceso a la tabla "funcionarios". Spring Data genera las consultas a partir del nombre de cada metodo.

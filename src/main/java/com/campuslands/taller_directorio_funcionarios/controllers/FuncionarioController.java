@@ -1,4 +1,4 @@
-package com.campuslands.directorio.controller;
+package com.campuslands.taller_directorio_funcionarios.controllers;
 
 import java.net.URI;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.campuslands.directorio.dto.FuncionarioRequest;
-import com.campuslands.directorio.model.Funcionario;
-import com.campuslands.directorio.service.FuncionarioService;
+import com.campuslands.taller_directorio_funcionarios.dto.FuncionarioRequest;
+import com.campuslands.taller_directorio_funcionarios.entities.Funcionario;
+import com.campuslands.taller_directorio_funcionarios.services.FuncionarioService;
 
 import jakarta.validation.Valid;
 

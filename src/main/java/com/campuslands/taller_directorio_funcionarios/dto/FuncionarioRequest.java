@@ -1,4 +1,4 @@
-package com.campuslands.directorio.dto;
+package com.campuslands.taller_directorio_funcionarios.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

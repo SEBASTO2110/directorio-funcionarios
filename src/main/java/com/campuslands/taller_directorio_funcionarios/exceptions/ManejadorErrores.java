@@ -1,4 +1,4 @@
-package com.campuslands.directorio.exception;
+package com.campuslands.taller_directorio_funcionarios.exceptions;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
-import com.campuslands.directorio.dto.ErrorRespuesta;
+import com.campuslands.taller_directorio_funcionarios.dto.ErrorRespuesta;
 
 /**
  * Convierte las excepciones de la API en respuestas JSON con el codigo HTTP que pide el taller.

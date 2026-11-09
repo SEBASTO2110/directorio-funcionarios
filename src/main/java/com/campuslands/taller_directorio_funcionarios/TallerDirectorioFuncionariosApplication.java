@@ -1,13 +1,13 @@
-package com.campuslands.directorio;
+package com.campuslands.taller_directorio_funcionarios;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DirectorioFuncionariosApplication {
+public class TallerDirectorioFuncionariosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DirectorioFuncionariosApplication.class, args);
+		SpringApplication.run(TallerDirectorioFuncionariosApplication.class, args);
 	}
 
 }
