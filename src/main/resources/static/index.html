@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Directorio de funcionarios</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<header class="cabecera">
+		<div class="cabecera__interior">
+			<p class="cabecera__etiqueta">Equipo administrativo</p>
+			<h1>Directorio de funcionarios</h1>
+			<p class="cabecera__texto">Registra, consulta, corrige y retira funcionarios desde un solo lugar.</p>
+		</div>
+	</header>
+
+	<main class="contenido">
+
+		<p id="mensaje" class="mensaje" role="status" aria-live="polite" hidden></p>
+
+		<div class="columnas">
+
+			<section class="panel" aria-labelledby="titulo-formulario">
+					<h2 id="titulo-formulario">Registrar funcionario</h2>
+					<form id="formulario" autocomplete="off">
+						<div class="campo">
+							<label for="campo-id">ID</label>
+							<input id="campo-id" type="text" readonly placeholder="Se asigna al guardar">
+						</div>
+						<div class="campo">
+							<label for="campo-nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+							<input id="campo-nombre" name="nombre" type="text" maxlength="120" required>
+						</div>
+						<div class="campo">
+							<label for="campo-cargo">Cargo <span class="obligatorio" aria-hidden="true">*</span></label>
+							<input id="campo-cargo" name="cargo" type="text" maxlength="120" required>
+						</div>
+						<div class="campo">
+							<label for="campo-departamento">Departamento <span class="obligatorio" aria-hidden="true">*</span></label>
+							<input id="campo-departamento" name="departamento" type="text" maxlength="120" required>
+						</div>
+						<div class="campo">
+							<label for="campo-telefono">Teléfono <span class="opcional">(opcional)</span></label>
+							<input id="campo-telefono" name="telefono" type="tel" maxlength="30">
+						</div>
+						<div class="acciones">
+							<button id="boton-guardar" type="submit" class="boton boton--principal">Guardar</button>
+							<button id="boton-limpiar" type="button" class="boton">Limpiar</button>
+						</div>
+					</form>
+			</section>
+
+			<div class="principal">
+
+				<section class="panel" aria-labelledby="titulo-busqueda">
+					<h2 id="titulo-busqueda">Buscar</h2>
+
+					<div class="busquedas">
+						<form id="form-id" class="busqueda">
+							<label for="buscar-id">Consultar por ID</label>
+							<div class="busqueda__fila">
+								<input id="buscar-id" type="number" min="1" step="1" placeholder="Ej. 3" required>
+								<button type="submit" class="boton">Consultar</button>
+							</div>
+						</form>
+
+						<form id="form-nombre" class="busqueda">
+							<label for="buscar-nombre">Buscar por nombre</label>
+							<div class="busqueda__fila">
+								<input id="buscar-nombre" type="text" placeholder="Parte del nombre" required>
+								<button type="submit" class="boton">Buscar</button>
+							</div>
+						</form>
+
+						<form id="form-departamento" class="busqueda">
+							<label for="buscar-departamento">Filtrar por departamento</label>
+							<div class="busqueda__fila">
+								<input id="buscar-departamento" type="text" placeholder="Ej. Contabilidad" required>
+								<button type="submit" class="boton">Filtrar</button>
+							</div>
+						</form>
+					</div>
+
+					<button id="boton-ver-todos" type="button" class="boton">Ver listado completo</button>
+				</section>
+
+				<section class="panel" aria-labelledby="titulo-tabla">
+					<div class="tabla__encabezado">
+						<h2 id="titulo-tabla">Funcionarios</h2>
+						<p id="vista-actual" class="tabla__vista">Listado completo</p>
+					</div>
+					<div class="tabla__contenedor">
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Cargo</th>
+									<th scope="col">Departamento</th>
+									<th scope="col">Teléfono</th>
+									<th scope="col">Acciones</th>
+								</tr>
+							</thead>
+							<tbody id="cuerpo-tabla"></tbody>
+						</table>
+					</div>
+					<p id="tabla-vacia" class="tabla__vacia" hidden>No hay funcionarios para mostrar.</p>
+				</section>
+
+			</div>
+
+		</div>
+	</main>
+
+	<dialog id="dialogo-eliminar" class="dialogo" aria-labelledby="titulo-dialogo">
+		<form method="dialog">
+			<h2 id="titulo-dialogo">Eliminar funcionario</h2>
+			<p id="texto-dialogo"></p>
+			<div class="acciones acciones--derecha">
+				<button type="submit" value="cancelar" class="boton">Cancelar</button>
+				<button type="submit" value="eliminar" class="boton boton--peligro">Eliminar</button>
+			</div>
+		</form>
+	</dialog>
+
+	<script src="app.js"></script>
+</body>
+</html>
